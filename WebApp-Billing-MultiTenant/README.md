@@ -20,7 +20,7 @@ To run this sample you will need:
 You will also need to be comfortable with the following tasks:
 
 - Using the [Azure portal](https://manage.windowsazure.com) (or working with your administrator) to do configuration work 
-- Using Git and Github to bring the [sample code](https://github.com/Azure-Samples/billing-dotnet-webapp-multitenant/) down to your local machine
+- Using Git and Github to bring the sample code down to your local machine
 - Using Visual Studio to edit configuration files, build, and run the sample
 
 Every Azure subscription has an associated AAD tenant.  If you don't already have an Azure subscription, you can get a free subscription by signing up at [http://wwww.windowsazure.com](http://www.windowsazure.com).  
