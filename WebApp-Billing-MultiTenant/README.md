@@ -19,8 +19,8 @@ To run this sample you will need:
 
 You will also need to be comfortable with the following tasks:
 
-- Using the [Azure Management Portal](https://manage.windowsazure.com) (or working with your administrator) to do configuration work 
-- Using Git and Github to bring the [sample code](https://github.com/Azure/BillingCodeSamples) down to your location machine
+- Using the [Azure portal](https://manage.windowsazure.com) (or working with your administrator) to do configuration work 
+- Using Git and Github to bring the [sample code](https://github.com/Azure-Samples/billing-dotnet-webapp-multitenant/) down to your local machine
 - Using Visual Studio to edit configuration files, build, and run the sample
 
 Every Azure subscription has an associated AAD tenant.  If you don't already have an Azure subscription, you can get a free subscription by signing up at [http://wwww.windowsazure.com](http://www.windowsazure.com).  
@@ -30,7 +30,7 @@ Before you can run the sample application, you will need to allow it to access y
 
 To configure a new AAD application:
 
-1. Log in to the [Azure Management Portal](http://manage.windowsazure.com), using credentials that have been granted service administrator or co-administrator access on the subscription which is trusting your AAD tenant, and granted Global Administrator access in the AAD tenant.  See [Manage Accounts, Subscriptions, and Administrative Roles](https://msdn.microsoft.com/library/azure/hh531793.aspx) for details on managing the service administrator and co-administrators.
+1. Sign in to the [Azure portal](http://manage.windowsazure.com), using credentials that have been granted service administrator or co-administrator access on the subscription which is trusting your AAD tenant, and granted Global Administrator access in the AAD tenant.  See [Manage Accounts, Subscriptions, and Administrative Roles](https://msdn.microsoft.com/library/azure/hh531793.aspx) for details on managing the service administrator and co-administrators.
 
 2. Select the AAD tenant you wish to use, and go to the "Applications" page.
 
@@ -60,14 +60,14 @@ To configure a new AAD application:
 
 9. While you are on this page, also note/copy the "Client ID" GUID and the client "Key", as you will use these in Step #3 below.  As mentioned above, YOU MUST SAVE A COPY of this key, as it will no longer be available for viewing in the Management Portal UI.
 
-### Step 2:  Clone or download the BillingCodeSamples repository
+### Step 2:  If you haven't already, Clone or download the billing-dotnet-webapp-multitenant repository
 
 From your shell (ie: Git Bash, etc.) or command line, run the following command :
 
-    git clone https://github.com/Azure/BillingCodeSamples.git
+    git clone https://github.com/Azure-Samples/billing-dotnet-webapp-multitenant/
 
 ### Step 3:  Edit and Build the sample in Visual Studio
-After you've configured your tenant and downloaded the sample app, you will need to go into the local sub directory in which the Visual Studio solution is stored (typically in `<your-git-root-directory>\BillingCodeSamples`), and open the `ConsoleApp-Billing-MultiTenant.sln` Visual Studio solution.  Upon opening, navigate to the `web.config` file and update the following key/value pairs, using your "Client ID" GUID and the client "Key" configuration information from earlier.  NOTE: It's very important that all values match your configuration!
+After you've configured your tenant and downloaded the sample app, you will need to go into the local sub directory in which the Visual Studio solution is stored (typically in `<your-git-root-directory>\billing-dotnet-webapp-multitenant`), and open the `ConsoleApp-Billing-MultiTenant.sln` Visual Studio solution.  Upon opening, navigate to the `web.config` file and update the following key/value pairs, using your "Client ID" GUID and the client "Key" configuration information from earlier.  NOTE: It's very important that all values match your configuration!
 
     <add key="ida:ClientID" value="ENTER-CLIENT-ID-GUID" />
     <add key="ida:Password" value="ENTER-CLIENT-KEY" />
@@ -86,7 +86,7 @@ When finished with Step 3, you should be able to successfully run the applicatio
 
 **Note**: The credentials you use for testing the application have 2 requirements :
 
-- The Azure Billing REST APIs are implemented as a Resource Provider as part of the Azure Resource Manager, and therefore share its dependencies.  Access control for Azure Resource Manager uses the built-in Owner, Contributor, and Reader roles, via the Role Based Access Control (RBAC) feature in the [Azure Preview Portal](https://portal.azure.com/).  Therefore, you must make sure that the signed-in user is a member of either the ‘Reader’, ‘Owner’ or ‘Contributor’ roles for the specified subscription.  By default, all Azure service administrator accounts are members of the Owner role. For details, see [Role-based access control in the Microsoft Azure portal](https://azure.microsoft.com/en-us/documentation/articles/role-based-access-control-configure/). 
+- The Azure Billing REST APIs are implemented as a Resource Provider as part of the Azure Resource Manager, and therefore share its dependencies.  Access control for Azure Resource Manager uses the built-in Owner, Contributor, and Reader roles, via the Role Based Access Control (RBAC) feature in the [Azure Preview portal](https://portal.azure.com/).  Therefore, you must make sure that the signed-in user is a member of either the ‘Reader’, ‘Owner’ or ‘Contributor’ roles for the specified subscription.  By default, all Azure service administrator accounts are members of the Owner role. For details, see [Role-based access control in the Microsoft Azure portal](https://azure.microsoft.com/documentation/articles/role-based-access-control-configure/). 
 
 - In addition, in order to access the Usage data for the Azure subscription, the credentials you use for sign-in must be granted service administrator or co-administrator access on the subscription.
 
