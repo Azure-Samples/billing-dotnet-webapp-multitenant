@@ -119,12 +119,12 @@ Finally, the last page you will see will show you the Usage consumption details 
 <center>![Sign-In] [6]</center>
 
 <!--Image references-->
-[1]: Readme-Sign-In.PNG
-[2]: Readme-Sign-In-LiveID-TenantDNS.PNG
-[3]: Readme-Sign-In-OrgID.PNG
-[4]: Readme-Sign-In-LiveID.PNG
-[5]: Readme-Subscription.PNG
-[6]: Readme-Usage.PNG
+[1]: readme-sign-in.png
+[2]: readme-sign-in-liveid-tenantdns.png
+[3]: readme-sign-in-orgid.png
+[4]: readme-sign-in-liveid.png
+[5]: readme-subscription.png
+[6]: readme-usage.png
 
 ## Need Help?
 
