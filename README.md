@@ -71,7 +71,7 @@ To configure a new AAD application:
 
 From your shell (ie: Git Bash, etc.) or command line, run the following command :
 
-    git clone https://github.com/Azure-Samples/billing-dotnet-webapp-multitenant/
+    git clone https://github.com/Azure-Samples/billing-dotnet-webapp-multitenant.git
 
 ### Step 3:  Edit and Build the sample in Visual Studio
 After you've configured your tenant and downloaded the sample app, you will need to go into the local sub directory in which the Visual Studio solution is stored (typically in `<your-git-root-directory>\billing-dotnet-webapp-multitenant\WebApp-Billing-MultiTenant`), and open the `ConsoleApp-Billing-MultiTenant.sln` Visual Studio solution.  Upon opening, navigate to the `web.config` file and update the following key/value pairs, using your "Client ID" GUID and the client "Key" configuration information from earlier.  NOTE: It's very important that all values match your configuration!
